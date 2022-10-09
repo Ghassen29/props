@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  background:#eee;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  position: relative;right: -7.5cm;
+  margin-top: 3cm;
+  background-color: rgb(65, 126, 247);
 }
 
-.App-link {
-  color: #61dafb;
+.card{
+  border:none;
+background-color: rgb(192, 211, 227);
+  position:relative;
+  overflow:hidden;
+  border-radius:30px;
+  cursor:pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card:before{
+
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:100%;
+  background-color:#E1BEE7;
+  transform:scaleY(1);
+  transition:all 0.5s;
+  transform-origin: bottom
+}
+
+.card:after{
+
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:100%;
+  background-color:#8E24AA;
+  transform:scaleY(0);
+  transition:all 0.5s;
+  transform-origin: bottom
+}
+
+.card:hover::after{
+  transform:scaleY(1);
+}
+
+
+.fonts{
+  font-size:11px;
+}
+
+.social-list{
+  display:flex;
+  list-style:none;
+  justify-content:center;
+  padding:0;
+}
+
+.social-list li{
+  padding:10px;
+  color:#8E24AA;
+  font-size:19px;
+}
+
+
+.buttons button:nth-child(1){
+     border:1px solid #8E24AA !important;
+     color:#8E24AA;
+     height:40px;
+}
+
+.buttons button:nth-child(1):hover{
+     border:1px solid #8E24AA !important;
+     color:#fff;
+     height:40px;
+     background-color:#8E24AA;
+}
+
+.buttons button:nth-child(2){
+     border:1px solid #8E24AA !important;
+     background-color:#8E24AA;
+     color:#fff;
+      height:40px;
+}
+
+.img{
+  margin: 2cm 0 1cm 0;
+
+}
+.name{
+  font-size: 30px;
+  margin: 0 0 1cm;
+  color: rgb(32, 32, 154);
+}
+.pro{
+  font-size: 20px;
+  text-align: center;
+  margin: 0 2cm 0cm 2cm;
+  color:rgb(76, 7, 132);
+
+}
+.bio{
+  color: black;
+  margin: 0.5cm 3cm 1cm 3cm ;
+  font-size: 20px;
 }
